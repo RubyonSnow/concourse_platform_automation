@@ -1,0 +1,12 @@
+---
+platform: linux
+
+image_resource:
+  type: registry-image
+  source: 
+    repository: hashicorp/terraform 
+    tag: full
+
+run:
+  path: ((repo_home))/scripts/pave_iaas.sh
+  user: root

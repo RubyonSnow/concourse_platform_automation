@@ -1,0 +1,21 @@
+resources:
+- name: tf_iaas
+  type: git
+  source: 
+    uri: https://github.com/pivotal-cf/terraforming-aws
+
+- name: automate_allthethings
+  type: git
+  source:
+    uri: https://github.com/RubyonSnow/concourse_platform_automation
+
+jobs:
+- name: pave_iaas_job
+  plan: 
+  - get: tf_iaas 
+    trigger: false
+  - get: automate_allthethings
+    trigger: false
+  - task: pave_iaas_task
+    file: ((repo_home))/tasks/pave_iaas.yml
+
