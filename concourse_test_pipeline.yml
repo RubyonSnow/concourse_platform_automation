@@ -17,5 +17,5 @@ jobs:
   - get: automate_allthethings
     trigger: false
   - task: pave_iaas_task
-    file: tasks/pave_iaas.yml
+    file: automate_allthethings/tasks/pave_iaas.yml
 
