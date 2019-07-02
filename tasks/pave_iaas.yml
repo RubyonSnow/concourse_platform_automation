@@ -10,3 +10,7 @@ image_resource:
 run:
   path: automate_allthethings/scripts/pave_iaas.sh
   user: root
+
+inputs:
+- name: automate_allthethings
+  
